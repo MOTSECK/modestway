@@ -58,7 +58,7 @@ const Header = () => {
       <div className="nav-container">
         {/* GAUCHE - Desktop */}
         <div className="nav-left desktop">
-          <Link to="/"><img src={`${import.meta.env.BASE_URL}icon.svg`}  alt="Logo" className="logo" /></Link>
+          <Link to="/"><img src="/icon.svg"  alt="Logo" className="logo" /></Link>
         </div>
 
         {/* MILIEU */}
