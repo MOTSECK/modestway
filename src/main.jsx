@@ -8,7 +8,7 @@ import '../styles/footer.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/modestway">
       <App /> {/* App ne contient plus de <Router> */}
     </BrowserRouter>
   </React.StrictMode>
