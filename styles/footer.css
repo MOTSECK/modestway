@@ -1,5 +1,69 @@
-footer {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+.footer {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px 20px;
+  z-index: 100;
+  font-family: Arial, sans-serif;
+  border-top: 1px solid #333;
+}
+
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 30px;
+}
+
+.footer-column {
+  flex: 1 1 150px;
+  min-width: 150px;
+}
+
+.footer-column h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer-column li:hover {
+  color: #aaa;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.footer-bottom span {
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+.maroc-flag {
+  font-size: 14px;
 }

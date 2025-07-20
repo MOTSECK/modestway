@@ -1,9 +1,12 @@
-// src/pages/APropos.jsx
-export default function AccessoiresHommes() {
+import React from 'react';
+
+const AccessoiresHommes = () => {
   return (
-    <div>
-      <h1>À propos de ModestWay</h1>
-      <p>Contenu de la page À propos...</p>
-    </div>
-  )
-}
+    <section style={{ padding: '100px 20px' }}>
+      <h1>Bienvenue sur ModestWay</h1>
+      <p>Page d’accueil avec contenu personnalisé ici.</p>
+    </section>
+  );
+};
+
+export default AccessoiresHommes;

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FiUser, FiShoppingBag, FiMenu, FiSearch } from 'react-icons/fi';
 import '../../styles/header.css';
+import '../../styles/globals.css';
+
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -53,12 +55,13 @@ const Header = () => {
 
 
   return (
+    <>
+    <div className='LogoName'>Modestway</div>
     <header className={`header ${scrollDirection === 'down' ? 'hide-header' : 'show-header'}`}>
-      <div className='LogoName'>...Modestway...</div>
       <div className="nav-container">
         {/* GAUCHE - Desktop */}
         <div className="nav-left desktop">
-          <Link to="/"><img src={`${import.meta.env.BASE_URL}icon.svg`}  alt="Logo" className="logo" /></Link>
+          <Link to="/"><img src="../public/icon.svg" alt="Logo" className="logo" /></Link>
         </div>
 
         {/* MILIEU */}
@@ -68,25 +71,25 @@ const Header = () => {
           <div className="dropdown">
             <span>Homme</span>
             <div className="dropdown-content">
-              <Link to="/hommes/qamis">Qamis</Link>
-              <Link to="/hommes/tshirts">T-Shirt</Link>
-              <Link to="/hommes/pantalons">Pantalon</Link>
-              <Link to="/hommes/chaussures">Chaussures</Link>
-              <Link to="/hommes/accessoires">Accessoires</Link>
+              <Link to="/Hommes/Qamis">Qamis</Link>
+              <Link to="/Hommes/TShirts">T-Shirt</Link>
+              <Link to="/Hommes/Pantalons">Pantalon</Link>
+              <Link to="/Hommes/ChaussuresHommes">Chaussures</Link>
+              <Link to="/Hommes/AccessoiresHommes">Accessoires</Link>
             </div>
           </div>
 
           <div className="dropdown">
             <span>Femme</span>
             <div className="dropdown-content">
-              <Link to="/femmes/voiles">Voile & Accessoires</Link>
-              <Link to="/femmes/chaussures">Chaussures</Link>
+              <Link to="/Femmes/VoileEtAccessoires">Voiles & Accessoires</Link>
+              <Link to="/Femmes/ChaussuresFemmes">Chaussures</Link>
             </div>
           </div>
 
-          <Link to="/livres">Livres</Link>
-          <Link to="/a-propos">À propos</Link>
-          <Link to="/contact">Contact</Link>
+          <Link to="/Livres">Livres</Link>
+          <Link to="/APropos">À propos</Link>
+          <Link to="/Contact">Contact</Link>
         </div>
 
         {/* DROITE - Desktop */}
@@ -111,7 +114,7 @@ const Header = () => {
 
         {/* CENTRE - Logo mobile */}
         <div className="logo-container mobile">
-          <Link to="/"><img src={`${import.meta.env.BASE_URL}icon.svg`}  alt="Logo" className="logo" /></Link>
+          <Link to="/"><img src="../public/icon.svg" alt="Logo" className="logo" /></Link>
         </div>
 
         {/* DROITE - Mobile */}
@@ -143,25 +146,31 @@ const Header = () => {
 
       {isMobileMenuOpen && !activeSubmenu && (
         <nav className="mobile-menu">
+          <div className='menu-logo'>
+            <Link to="/"><img src="../public/icon.svg" alt="Logo" className="logo" /></Link>
+          </div>
           <button className="close-btn" onClick={() => setIsMobileMenuOpen(false)}>✕</button>
           <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Accueil</Link>
           <button className="submenu-btn" onClick={() => setActiveSubmenu('homme')}>
-            Homme <span className="arrow">➔</span>
+            Homme <span className="arrow">⇒</span>
           </button>
           <button className="submenu-btn" onClick={() => setActiveSubmenu('femme')}>
-            Femme <span className="arrow">➔</span>
+            Femme <span className="arrow">⇒</span>
           </button>
-          <Link to="/livres" onClick={() => setIsMobileMenuOpen(false)}>Livres</Link>
-          <Link to="/a-propos" onClick={() => setIsMobileMenuOpen(false)}>À propos</Link>
-          <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
+          <Link to="/Livres" onClick={() => setIsMobileMenuOpen(false)}>Livres</Link>
+          <Link to="/APropos" onClick={() => setIsMobileMenuOpen(false)}>À propos</Link>
+          <Link to="/Contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
         </nav>
       )}
 
       {activeSubmenu === 'homme' && (
         <nav className="mobile-submenu">
+          <div className='menu-logo'>
+            <Link to="/"><img src="../public/icon.svg" alt="Logo" className="logo" /></Link>
+          </div>
           <div className='btns'>
             <button className="back-btn" onClick={() => setActiveSubmenu(null)}>
-              <span className="arrow-left">←</span> Retour
+              <span className="arrow-left">⇐</span> Retour
             </button>
             <button
               className="close-btn"
@@ -174,19 +183,22 @@ const Header = () => {
             </button>
           </div>
           <h2>HOMME</h2>
-          <Link to="/hommes/qamis" onClick={closeAllMenus}>Qamis</Link>
-          <Link to="/hommes/tshirts" onClick={closeAllMenus}>T-Shirts</Link>
-          <Link to="/hommes/pantalons" onClick={closeAllMenus}>Pantalons</Link>
-          <Link to="/hommes/chaussures" onClick={closeAllMenus}>Chaussures</Link>
-          <Link to="/hommes/accessoires" onClick={closeAllMenus}>Accessoires</Link>
+          <Link to="/Hommes/Qamis" onClick={closeAllMenus}>Qamis</Link>
+          <Link to="/Hommes/TShirts" onClick={closeAllMenus}>T-Shirts</Link>
+          <Link to="/Hommes/Pantalons" onClick={closeAllMenus}>Pantalons</Link>
+          <Link to="/Hommes/ChaussuresHommes" onClick={closeAllMenus}>Chaussures</Link>
+          <Link to="/Hommes/AccessoiresHommes" onClick={closeAllMenus}>Accessoires</Link>
         </nav>
       )}
 
       {activeSubmenu === 'femme' && (
         <nav className="mobile-submenu">
+          <div className='menu-logo'>
+            <Link to="/"><img src="../public/icon.svg" alt="Logo" className="logo" /></Link>
+          </div>
           <div className='btns'>
             <button className="back-btn" onClick={() => setActiveSubmenu(null)}>
-              <span className="arrow-left">←</span> Retour
+              <span className="arrow-left">⇐</span> Retour
             </button>
             <button
               className="close-btn"
@@ -199,8 +211,8 @@ const Header = () => {
             </button>
          </div>
           <h2>FEMME</h2>
-          <Link to="/femmes/voiles" onClick={closeAllMenus}>Voile & Accessoires</Link>
-          <Link to="/femmes/chaussures" onClick={closeAllMenus}>Chaussures</Link>
+          <Link to="/Femmes/VoileEtAccessoires" onClick={closeAllMenus}>Voiles & Accessoires</Link>
+          <Link to="/Femmes/Chaussures" onClick={closeAllMenus}>Chaussures</Link>
         </nav>
       )}
       {isSearchOpen && (
@@ -219,6 +231,7 @@ const Header = () => {
       )}
 
     </header>
+    </>
   );
 };
 

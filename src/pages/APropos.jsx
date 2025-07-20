@@ -1,9 +1,12 @@
-// src/pages/APropos.jsx
-export default function APropos() {
+import React from 'react';
+
+const APropos = () => {
   return (
-    <div>
-      <h1>À propos de ModestWay</h1>
-      <p>Contenu de la page À propos...</p>
-    </div>
-  )
-}
+    <section style={{ padding: '100px 20px' }}>
+      <h1>À propos</h1>
+      <p>Bienvenue sur notre page À propos.</p>
+    </section>
+  );
+};
+
+export default APropos;
