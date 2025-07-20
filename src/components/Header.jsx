@@ -61,7 +61,7 @@ const Header = () => {
       <div className="nav-container">
         {/* GAUCHE - Desktop */}
         <div className="nav-left desktop">
-          <Link to="/"><img src="/icon.svg" alt="Logo" className="logo" /></Link>
+          <Link to="/"><img src="icon.svg" alt="Logo" className="logo" /></Link>
         </div>
 
         {/* MILIEU */}
@@ -114,7 +114,7 @@ const Header = () => {
 
         {/* CENTRE - Logo mobile */}
         <div className="logo-container mobile">
-          <Link to="/"><img src="/icon.svg" alt="Logo" className="logo" /></Link>
+          <Link to="/"><img src="icon.svg" alt="Logo" className="logo" /></Link>
         </div>
 
         {/* DROITE - Mobile */}
@@ -147,7 +147,7 @@ const Header = () => {
       {isMobileMenuOpen && !activeSubmenu && (
         <nav className="mobile-menu">
           <div className='menu-logo'>
-            <Link to="/"><img src="/icon.svg" alt="Logo" className="logo" /></Link>
+            <Link to="/"><img src="icon.svg" alt="Logo" className="logo" /></Link>
           </div>
           <button className="close-btn" onClick={() => setIsMobileMenuOpen(false)}>✕</button>
           <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Accueil</Link>
@@ -166,7 +166,7 @@ const Header = () => {
       {activeSubmenu === 'homme' && (
         <nav className="mobile-submenu">
           <div className='menu-logo'>
-            <Link to="/"><img src="/icon.svg" alt="Logo" className="logo" /></Link>
+            <Link to="/"><img src="icon.svg" alt="Logo" className="logo" /></Link>
           </div>
           <div className='btns'>
             <button className="back-btn" onClick={() => setActiveSubmenu(null)}>
@@ -194,7 +194,7 @@ const Header = () => {
       {activeSubmenu === 'femme' && (
         <nav className="mobile-submenu">
           <div className='menu-logo'>
-            <Link to="/"><img src="/icon.svg" alt="Logo" className="logo" /></Link>
+            <Link to="/"><img src="icon.svg" alt="Logo" className="logo" /></Link>
           </div>
           <div className='btns'>
             <button className="back-btn" onClick={() => setActiveSubmenu(null)}>
